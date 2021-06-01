@@ -14,10 +14,10 @@ const Home = () =>
     <Grid className={useStyles.root}>
         <div>
             Avaliação de Denílson
-        <Link to="/maxdoctor">
+            <Link to="/maxdoctor">
                 <button>
                     Acessar MaxDoctor
-            </button>
+                </button>
             </Link>
         </div>
     </Grid>
