@@ -13,6 +13,17 @@ const useStyles = makeStyles((theme) => ({
     title: {
         marginBottom: '0px',
         marginTop: '0px',
+    },
+    max: {
+        fontWeight: 'bold',
+        fontStyle: 'italic'
+    },
+    doctor: {
+        textAlign: 'center',
+        paddingLeft: '30px',
+        paddingBottom: '8px',
+        marginTop: '0px',
+        lineHeight: '0.7rem'
     }
 }));
 
@@ -22,8 +33,14 @@ const Header = () => {
     return (
         <div>
             <span>
-                <p className={classes.title}>Max</p>
-                <p className={classes.title}>Doctor</p>
+                <div>
+                    <Typography className={classes.max} variant="h3" color="primary">
+                        MAX
+                    </Typography>
+                </div>
+                <Typography variant="h5">
+                    <p className={classes.doctor}>Doctor</p>
+                </Typography>
             </span>
             <Typography className={classes.typographySubtitle} variant="subtitle1" gutterBottom>
                 <p className={classes.title}>A plataforma de compra direta </p>

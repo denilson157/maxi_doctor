@@ -18,8 +18,8 @@ const useStyles = makeStyles((theme) => ({
     containerGrid: {
         display: 'flex',
         justifyContent: 'space-around',
-        marginBottom: '1.5rem',
-        marginTop: '2.5rem'
+        marginBottom: '1.2rem',
+        marginTop: '1.9rem'
     },
     iconFontSize: {
         fontSize: '3.2rem'
