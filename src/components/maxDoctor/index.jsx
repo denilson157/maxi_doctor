@@ -1,12 +1,13 @@
 import React from 'react'
-import { Header, Form, Actions } from './components'
+import { Paper } from '@material-ui/core'
+import { Header, Form, Footer } from './components'
 
 const MaxDoctor = () =>
 (
     <div>
         <Header />
         <Form />
-        <Actions />
+        <Footer />
     </div>
 );
 

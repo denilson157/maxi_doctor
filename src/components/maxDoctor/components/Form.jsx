@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { FormControl, TextField, InputAdornment, Button, Input } from '@material-ui/core';
+import React, { useState, useEffect } from 'react'
+import { FormControl, Grid, TextField, Typography, InputAdornment, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -8,19 +8,20 @@ const useStyles = makeStyles((theme) => ({
         width: '27px',
         textAlign: 'initial'
     },
-    select: {
-        '&:before': {
-            borderColor: theme.palette.primary.main
-        },
-        '&:after': {
-            borderColor: theme.palette.background.default
-        }
+    typographySubtitle: {
+        fontWeight: '549',
+        fontSize:'0.9rem',
+        textTransform: 'uppercase',
+        color: theme.palette.primary.main
     },
-    icon: {
-        fill: theme.palette.primary.main
+    title: {
+        marginBottom: '0px',
+        marginTop: '0px',
     },
-    underline:{
-        borderColor: theme.palette.primary.main
+    buttonSubmit: {
+        marginTop: '22px',
+        marginBottom: '15px',
+        minWidth: '100%'
     }
 }));
 
@@ -34,22 +35,30 @@ const Form = () => {
             .then(ufsData => setUfs(ufsData));
     }
 
+    useEffect(() => {
+        getUf();
+    }, []);
+
+    const adornment = text => (
+        <InputAdornment position="start">
+            <p className={classes.adornmentSize}>
+                {text}
+            </p>
+        </InputAdornment>
+    )
+
     return (
-        <FormControl>
+        <FormControl fullWidth="true">
             <TextField
                 id="standard-start-adornment"
                 placeholder="0000000"
                 InputProps={{
-                    startAdornment:
-                        <InputAdornment position="start">
-                            <p className={classes.adornmentSize}>
-                                CRM
-                            </p>
-                        </InputAdornment>,
+                    startAdornment: adornment("CRM")
                 }}
             />
 
             <TextField
+                className={classes.select}
                 id="standard-select-currency-native"
                 select
                 // value={currency}
@@ -57,18 +66,8 @@ const Form = () => {
                 SelectProps={{
                     native: true,
                 }}
-                input={
-                    <Input classes={{
-                        underline: classes.underline,
-                    }} />
-                }
                 InputProps={{
-                    startAdornment:
-                        <InputAdornment position="start">
-                            <p className={classes.adornmentSize}>
-                                UF
-                            </p>
-                        </InputAdornment>,
+                    startAdornment: adornment("UF")
                 }}
             >
                 <option value="0">
@@ -80,9 +79,16 @@ const Form = () => {
                     </option>
                 ))}
             </TextField>
-            <Button onClick={() => getUf()}>
-                buscar
+
+            <Button variant="contained" color="secondary" className={classes.buttonSubmit}>
+                Continue
             </Button>
+
+            <Typography className={classes.typographySubtitle} variant="subtitle1" gutterBottom>
+                <p className={classes.title}>Canal de compra exclusico </p>
+                <p className={classes.title}>para classe media</p>
+            </Typography>
+
         </FormControl>
     )
 };

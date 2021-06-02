@@ -6,7 +6,9 @@ const useStyles = makeStyles((theme) => ({
     typographySubtitle: {
         fontWeight: 'bold',
         textTransform: 'uppercase',
-        color: theme.palette.primary.main
+        color: theme.palette.primary.main,
+        marginBottom: '30px',
+        marginTop: '20px',
     },
     title: {
         marginBottom: '0px',
