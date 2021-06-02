@@ -10,13 +10,15 @@ const useStyles = makeStyles((theme) => ({
     },
     main: {
         display: 'flex',
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        flex: 1
+        textAlign: 'center',
+        minHeight: '100vh',
     }
 }));
 
-const Base = props => {
+const Base = () => {
 
     const classes = useStyles();
 
