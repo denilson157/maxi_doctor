@@ -1,10 +1,13 @@
 import React from 'react'
+import { Header, Form, Actions } from './components'
 
-const Home = () =>
+const MaxDoctor = () =>
 (
     <div>
-        Max Doctor
+        <Header />
+        <Form />
+        <Actions />
     </div>
 );
 
-export default Home;
+export default MaxDoctor;

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
-import { withStyles } from '@material-ui/styles';
 
 const useStyles = makeStyles((theme) => ({
     link: {
@@ -16,16 +15,16 @@ const Home = () => {
     const classes = useStyles();
 
     return (
-        <div>
+        <>
             <Typography variant="h3" component="h1" gutterBottom>
                 Avaliação de Denílson
-        </Typography>
+            </Typography>
             <Link to="/maxdoctor" className={classes.link}>
                 <Button variant="contained" color="primary">
                     Acessar MaxDoctor
                 </Button>
             </Link>
-        </div>
+        </>
     )
 }
 
