@@ -1,4 +1,4 @@
-# Create React App example
+# Max Doctor App example
 
 ## How to use
 
