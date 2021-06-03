@@ -104,7 +104,7 @@ const Form = () => {
 
 
     return (
-        <FormControl fullWidth="true">
+        <FormControl fullWidth={true}>
             <TextField
 
                 id="standard-start-adornment"
@@ -130,13 +130,14 @@ const Form = () => {
                 InputProps={{
                     startAdornment: adornment("UF")
                 }}
+                defaultValue={form.uf}
                 {...(formErrors.uf && { error: true, helperText: formErrors.uf })}
             >
-                <option value="0" selected={form.uf === "option.sigla"}>
+                <option value="0">
                     Selecionar
                 </option>
                 {ufs.sort((a, b) => a.sigla < b.sigla ? -1 : a.sigla > b.sigla ? 1 : 0).map((option) => (
-                    <option selected={form.uf === option.sigla} key={option.sigla} value={option.sigla}>
+                    <option key={option.sigla} value={option.sigla}>
                         {option.sigla}
                     </option>
                 ))}
