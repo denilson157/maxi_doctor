@@ -13,7 +13,10 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: '85px',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center'
+        alignItems: 'center',        
+        textTransform: 'uppercase',
+        fontSize: '0.7rem',
+        color: theme.palette.black.light
     },
     containerGrid: {
         display: 'flex',

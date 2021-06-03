@@ -24,7 +24,8 @@ const useStyles = makeStyles((theme) => ({
         minWidth: '100%'
     },
     select: {
-        paddingTop: '10px'
+        paddingTop: '10px',
+        color: theme.palette.black.light
     },
     messsageSuccess: {
         fontWeight: '549',
@@ -156,7 +157,7 @@ const Form = () => {
 
             <Typography className={classes.typographySubtitle} variant="subtitle1" gutterBottom>
                 <p className={classes.title}>Canal de compra exclusico </p>
-                <p className={classes.title}>para classe media</p>
+                <p className={classes.title}>para classe médica</p>
             </Typography>
 
         </FormControl>
