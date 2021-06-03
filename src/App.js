@@ -7,7 +7,6 @@ import theme from './components/template/theme'
 const App = () => (
   <ThemeProvider theme={theme}>
     <BrowserRouter>
-
       <CssBaseline />
       <TemplateBase />
     </BrowserRouter>
